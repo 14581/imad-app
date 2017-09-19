@@ -23,7 +23,7 @@ function hash(input,salt) {
     return hashing;
 }
 app.get('/hash/:input',function(req,res){
-var hashed = hash(req.params.input,'This is a random string');
+var hashed = hash(req.params.input,'This-isarandomstring');
 return hashed.toString('hex');
 // res.send(hashed.toString('hex'));
 });
