@@ -24,8 +24,8 @@ function hash(input,salt) {
 }
 app.get('/hash/:input',function(req,res){
 var hashed = hash(req.params.input,'This is a random string');
- res.send(hashed.toString('hex'));
-//.toString('hex')
+return hashed.toString('hex');
+// res.send(hashed.toString('hex'));
 });
   
   
