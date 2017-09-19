@@ -24,7 +24,7 @@ function hash(input,salt) {
 }
 app.get('/hash/:input',function(req,res){
 var hashed = hash(req.params.input,'This-isarandomstring');
- res.send(hashed.toString());
+ res.send(hashed.toString(''));
 });
   
   
